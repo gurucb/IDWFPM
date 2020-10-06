@@ -5,10 +5,10 @@ from bs4 import BeautifulSoup
 import os
 import shutil
 
-server = "idwcdcsvr.database.windows.net"
-database = "IDWCDC"
-username = "idwadmin"
-password = "Pass@word123"
+server = "<Server Name>.database.windows.net"
+database = "<DBName>"
+username = "<User Name>"
+password = "<Password>"
 driver = "{ODBC Driver 17 for SQL Server}"
 
 connection = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
