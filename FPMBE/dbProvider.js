@@ -66,7 +66,7 @@ module.exports.GetRecommendedPrices = async () => {
   rp.price as 'recommprice',
   getdate() as 'recommdate'
   from flipkartitems fi inner join RecommendedPrice rp 
-  on cast(fi.ITEMID as varchar(100)) = cast(rp.ID1 as varchar(100))
+  on cast(fi.ITEMID as varchar(100)) = cast(rp.ID1 as varchar(100)) for JSON AUTO
   `;
   return await executeQuery(sql)
 }
